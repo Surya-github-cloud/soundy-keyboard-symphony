@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        keyboard: {
+          black: '#1a1a1a',
+          white: '#ffffff',
+          pressed: '#6366f1',
+          hover: '#4f46e5'
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +91,17 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'key-press': {
+          '0%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(4px)' },
+          '100%': { transform: 'translateY(0)' }
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'key-press': 'key-press 0.2s ease-out'
 			}
 		}
 	},
